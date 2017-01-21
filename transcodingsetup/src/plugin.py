@@ -83,10 +83,11 @@ class TranscodingSetup(ConfigListScreen, Screen):
 		else:
 			if boxtype == "et10000" or boxtype == "hd2400":
 				transcoding = "enigma"
-				else:
+		else:
 			if boxtype == "formuler" or boxtype == "formuler1":
 				transcoding = "sfteam"
-				if boxtype == "gigablue" or boxtype == "gbquadplus":
+		else:
+			if boxtype == "gigablue" or boxtype == "gbquadplus":
 				transcoding = "sfteam"
 
 		if transcoding == "vuplus":
