@@ -83,19 +83,15 @@ class TranscodingSetup(ConfigListScreen, Screen):
 		else:
 			if boxtype == "et10000" or boxtype == "hd2400":
 				transcoding = "enigma"
-		else:
-			if boxtype == "formuler" or boxtype == "formuler1":
-				transcoding = "sfteam"
-		else:
-			if boxtype == "gigablue" or boxtype == "gbquadplus":
-				transcoding = "sfteam"
+		if boxtype == "formuler" or boxtype == "formuler1":
+				transcoding = "enigma"
+		if boxtype == "gigablue" or boxtype == "gbquadplus":
+				transcoding = "enigma"
 
 		if transcoding == "vuplus":
 			port = 8002
 		elif transcoding == "enigma":
 			port = 8001
-			elif transcoding == "sfteam":
-			port = 8003
 		elif transcoding is None:
 			self.statusTimer.callback.append(self.setErrorMessage)
 			self.statusTimer.start(500, True)
