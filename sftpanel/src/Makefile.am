@@ -1,4 +1,4 @@
-installdir = $(libdir)/python/Plugins/SystemPlugins
+installdir = $(libdir)/python/Plugins/SystemPlugins/sftpanel
 
 install_PYTHON =  \
                    __init__.py \
