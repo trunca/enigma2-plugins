@@ -1,0 +1,16 @@
+<default>
+	  <prerequisites>
+                    <tag type="System" />
+	  </prerequisites>
+          <info>
+                    <author>Tode</author>
+                    <name>sftpanel</name>
+                    <packagename>enigma2-plugin-extensions-sftpanel</packagename>
+                    <shortdescription>panelsfteam</shortdescription>
+                    <description>sfteampanel.</description>
+                    <screenshot src="http://www.dreamboxupdate.com/preview/plugin_audiosync_en.jpg" />
+          </info>
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-plugin-extensions-sftpanel" />
+	  </files>
+</default>
