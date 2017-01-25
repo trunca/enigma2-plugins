@@ -12,7 +12,7 @@ from Components.config import config, ConfigSubsection, getConfigListEntry, Conf
 
 config.plugins.transcodingsetup = ConfigSubsection()
 config.plugins.transcodingsetup.port = ConfigInteger(default = None, limits = (1024, 65535))
-config.plugins.transcodingsetup.bitrate = ConfigInteger(default = None, limits = (50000, 2000000))
+config.plugins.transcodingsetup.bitrate = ConfigInteger(default = None, limits = (50000, 4000000))
 config.plugins.transcodingsetup.resolution = ConfigSelection(default = "480p", choices = [ ("720x480", "480p"), ("720x576", "576p"), ("1280x720", "720p") ])
 
 config.plugins.transcodingsetup.framerate = ConfigInteger(default = None)
@@ -25,19 +25,16 @@ class TranscodingSetup(ConfigListScreen, Screen):
 	skin = 	"""
 		<screen position="center,center" size="500,114" title="Transcoding Setup">
 			<widget name="content" position="0,0" size="500,22" font="Regular;20" />
-
 			<widget name="config" position="4,26" font="Regular;20" size="492,60" />
-
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,76" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="150,76" size="140,40" alphatest="on" />
-
 			<widget source="key_red" render="Label" position="0,76" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" foregroundColor="#ffffff" transparent="1"/>
 			<widget source="key_green" render="Label" position="150,76" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" foregroundColor="#ffffff" transparent="1"/>
 		</screen>
 		"""
 
 	def __init__(self, session):
-		bitrate_choices = [( 50, "50 kbps" ), ( 100, "100 kbps" ), ( 200, "200 kbps" ), ( 500, "500 kbps" ), ( 1000, "1 Mbps" ), ( 2000, "2 Mbps" )]
+		bitrate_choices = [( 50, "50 kbps" ), ( 100, "100 kbps" ), ( 200, "200 kbps" ), ( 500, "500 kbps" ), ( 1000, "1 Mbps" ), ( 1500, "1.5 Mbps" ), ( 2000, "2 Mbps" ), ( 2500, "2.5 Mbps" ), ( 3000, "3 Mbps" ), ( 3500, "3.5 Mbps" ), ( 4000, "4 Mbps" )]
 		size_choices = [ "480p", "576p", "720p" ]
 
 		current_bitrate_value = ""
@@ -78,15 +75,14 @@ class TranscodingSetup(ConfigListScreen, Screen):
 		except:
 			pass
 
-		if vumodel == "solo2" or vumodel == "duo2" or vumodel == "solose" or vumodel == "solo4k" or vumodel == "uno4k" or vumodel == "ultimo4k"
+		if vumodel == "solo2" or vumodel == "duo2" or vumodel == "solose" or vumodel == "solo4k" or vumodel == "uno4k" or vumodel == "ultimo4k":
 			transcoding = "vuplus"
-		else:
-			if boxtype == "et10000" or boxtype == "hd2400":
-				transcoding = "enigma"
-		if boxtype == "formuler" or boxtype == "formuler1":
-				transcoding = "enigma"
-		if boxtype == "gigablue" or boxtype == "gbquadplus":
-				transcoding = "enigma"
+		elif boxtype == "et10000" or boxtype == "hd2400":
+			transcoding = "enigma"
+		elif boxtype == "formuler" or boxtype == "formuler1":
+			transcoding = "enigma"
+		elif boxtype == "gigablue" or boxtype == "gbquadplus":
+			transcoding = "enigma"
 
 		if transcoding == "vuplus":
 			port = 8002
