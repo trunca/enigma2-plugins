@@ -65,7 +65,6 @@ SUBDIRS = \
 	satipclient \
 	seekbar \
 	setpasswd \
-	sftpanel \
 	shoutcast \
 	showclock \
 	simplerss \
