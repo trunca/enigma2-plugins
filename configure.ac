@@ -424,7 +424,6 @@ shoutcast/src/Makefile
 
 sftpanel/Makefile
 sftpanel/meta/Makefile
-sftpanel/po/Makefile
 sftpanel/src/Makefile
 
 showclock/Makefile
