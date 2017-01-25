@@ -422,6 +422,11 @@ shoutcast/meta/Makefile
 shoutcast/po/Makefile
 shoutcast/src/Makefile
 
+sftpanel/Makefile
+sftpanel/meta/Makefile
+sftpanel/po/Makefile
+sftpanel/src/Makefile
+
 showclock/Makefile
 showclock/meta/Makefile
 showclock/po/Makefile
