@@ -86,7 +86,7 @@ SUBDIRS = \
 	zaphistorybrowser \
 	zapstatistic \
 	zdfmediathek \
-	GigaBlueVFDControl \
+	gigavfdcontrol \
 	AudioEffect
 
 metadir = $(datadir)/meta
