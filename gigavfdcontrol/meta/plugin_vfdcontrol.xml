@@ -3,8 +3,8 @@
                     <tag type="System" />
 	  </prerequisites>
           <info>
-                    <author>babsy</author>
-                    <name>VFDControl</name>
+                    <author>sfteam</author>
+                    <name>gigavfdcontrol</name>
                     <packagename>enigma2-plugin-systemplugins-gigavfdcontrol</packagename>
                     <shortdescription>vfd controller</shortdescription>
                     <description>vfd controller</description>
