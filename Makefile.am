@@ -85,7 +85,9 @@ SUBDIRS = \
 	werbezapper \
 	zaphistorybrowser \
 	zapstatistic \
-	zdfmediathek
+	zdfmediathek \
+	GigaBlueVFDControl \
+	AudioEffect
 
 metadir = $(datadir)/meta
 meta_DATA = index-enigma2-plugins.xml
