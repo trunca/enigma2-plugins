@@ -49,11 +49,6 @@ AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 AC_CONFIG_FILES([
 Makefile
 
-gigavfdcontrol/Makefile
-gigavfdcontrol/src/Makefile
-gigavfdcontrol/meta/Makefile
-gigavfdcontrol/po/Makefile
-
 aihdcontroler/Makefile
 aihdcontroler/meta/Makefile
 aihdcontroler/src/Makefile
